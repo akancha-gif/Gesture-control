@@ -53,7 +53,7 @@ Give it camera access and hold up your hand — boom, it’s alive! ⚡
 * You can replace the sound in the code:
 
 ```html
-<audio id="middleFingerSound" src="your-sound-file.wav"></audio>
+<audio id="middleFingerSound" src="sound.mp3"></audio>
 ```
  📂 Files Overview
 
