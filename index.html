@@ -20,7 +20,6 @@
   </div>
   <div class="text">Make hand gestures like 👍 ✌️ 👊 in front of your camera!</div>
 <audio id="middleFingerSound" src="beep.mp3"></audio>
-
 <audio id="victorySound" src="victory.mp3"></audio>
 <audio id="thumbsupSound" src="thumbsup.mp3"></audio>
 <audio id="pointingSound" src="pointing.mp3"></audio>
@@ -102,8 +101,8 @@
     hands.setOptions({
       maxNumHands: 1,
       modelComplexity: 1,
-      minDetectionConfidence: 0.5,
-      minTrackingConfidence: 0.5
+      minDetectionConfidence: 0.7,
+      minTrackingConfidence: 0.7
     });
 
     hands.onResults(results => {
