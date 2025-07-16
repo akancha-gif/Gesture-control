@@ -13,8 +13,8 @@ Imagine controlling a webpage using just ✋ your hand. No mouse. No keyboard. J
 * 👍 Thumbs Up? Yup, we see you.
 * 👆 Point? Sure, boss.
 * 🖕 Middle finger? *BEEP!* Sound effect triggered. 😅
-* ✊ Fist and ✋ Palm too? Of course.
-* 🤏 Do a pinch (thumb + index) and it detects a *click*
+*  ✋ Palm too? Of course.
+
 
  
 ⚙️ Tech Behind This:
@@ -22,7 +22,7 @@ Imagine controlling a webpage using just ✋ your hand. No mouse. No keyboard. J
 * **HTML + CSS + JavaScript** for frontend wizardry
 * **MediaPipe Hands** for real-time hand landmark tracking 🧠
 * **CameraUtils + DrawingUtils** to show the cool hand skeleton
-* 🔊 **Sound feedback** when middle finger detected (because, drama 🧨)
+* 🔊 **Sound feedback** when detected 
 
 
 
@@ -40,21 +40,16 @@ Give it camera access and hold up your hand — boom, it’s alive! ⚡
  ✌️          “Victory” detected                            
  👍          “Thumbs Up”                                   
  👆          “Pointing”                                    
-✊           “Fist”                                        
+                                     
  ✋          “Open Palm”                                   
- 🖕          *Sound plays* and label shows “Middle Finger” 
- 🤏          “Click” (thumb + index close together)        
+ 🖕            “Middle Finger” 
+       
 
 
 
-## 🔊 About the Sound
 
-* When you show the middle finger (😳), a **funny beep sound** plays.
-* You can replace the sound in the code:
 
-```html
-<audio id="middleFingerSound" src="sound.mp3"></audio>
-```
+
  📂 Files Overview
 
 ```
@@ -63,7 +58,7 @@ Gesture-control
 ├── index.html       ← html file + script file
 ├── style.css        ←  for styling
 └── sounds
-    └── sound.mp3     ← sound effect for 🖕
+    └── sounds.mp3     ← sound effects 
 ```
 
 
@@ -77,7 +72,7 @@ Simple, sweet, and surprisingly powerful!
  🙌 Acknowledgements
 
 * Made  using [MediaPipe Hands](https://mediapipe.readthedocs.io/en/latest/solutions/hands.html)
-* Sound from [Zedge](https://www.zedge.net/ringtones)
+* sound [google]
 * Big thanks to your ✋ hand for being the real Most Valuable Player here.
 
 
