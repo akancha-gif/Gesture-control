@@ -19,7 +19,12 @@
     
   </div>
   <div class="text">Make hand gestures like 👍 ✌️ 👊 in front of your camera!</div>
-<audio id="middleFingerSound" src="sound.mp3"></audio>
+<audio id="middleFingerSound" src="beep.mp3"></audio>
+
+<audio id="victorySound" src="victory.mp3"></audio>
+<audio id="thumbsupSound" src="thumbsup.mp3"></audio>
+<audio id="pointingSound" src="pointing.mp3"></audio>
+<audio id="openpalmSound" src="openpalm.mp3"></audio>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
@@ -43,7 +48,7 @@
       const dy = indexTip.y - thumbTip.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance < 0.05) return "Click 🤏";
+      
 
       const indexUp = indexTip.y < landmarks[5].y;
       const middleUp = middleTip.y < landmarks[9].y;
@@ -51,23 +56,43 @@
       const pinkyUp = landmarks[20].y < landmarks[17].y;
       const thumbUp = thumbTip.y < landmarks[2].y;
 
-      if (!thumbUp && !indexUp && !middleUp && !ringUp && !pinkyUp)
-       return "Fist ✊";
+      
       if (indexUp && middleUp && !ringUp && !pinkyUp ) 
-      return "Victory ✌️";
+      {
+        const sound3 = document.getElementById("victorySound");
+        sound3.play();
+              return "Victory ✌️";
+      }
+      
       if (thumbUp && !indexUp && !middleUp && !ringUp && !pinkyUp)
-       return "Thumbs Up 👍";
+      {
+        const sound4 = document.getElementById("thumbsupSound");
+        sound4.play();
+        return "Thumbs Up 👍";
+      }
+       
       if (indexUp && !middleUp && !ringUp && !pinkyUp  ) 
-      return "Pointing 👆";
+      {
+        const sound5 = document.getElementById("pointingSound");
+        sound5.play();
+        return "Pointing 👉";
+      }
+      
       if (indexUp && middleUp && ringUp && pinkyUp)
-       return "Open Palm ✋";
-      if (middleUp &&  !indexUp && !ringUp && !pinkyUp) {
-  const sound = document.getElementById("middleFingerSound");
-  sound.play();
-  return "Middle Finger 😳";
-}
+      {
+        const sound6 = document.getElementById("openpalmSound");
+        sound6.play();
+        return "Open Palm ✋";
+      }
+       
+      if (middleUp &&  !indexUp && !ringUp && !pinkyUp) 
+      {
+        const sound1 = document.getElementById("middleFingerSound");
+        sound1.play();
+        return "Middle Finger 😳";
+      }
 
- return "Unknown";
+        return "Unknown";
     }
 
     const hands = new Hands({
